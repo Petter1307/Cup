@@ -246,7 +246,7 @@ int operator<=(cup &x, cup &y)
         return 0;
 };
 //----------------------------------------------------------------------------------------
-// Relations between Classes.
+// Relations between Classes. Lab 10 HOMEWORK
 class cup_set
 {
 

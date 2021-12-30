@@ -199,12 +199,19 @@ int cup::verify_eought_clay(float weight)
 //----------------------------------------------------------------------------------------
 void cup::show_cup_details()
 {
-    cout << endl;
-    cout << "Cup ID: " << id_cup << endl;
-    cout << "Collor: " << color << endl;
-    cout << "Utilization: " << utilization << endl;
-    cout << "Weight: " << weight << endl;
-    cout << "Volume: " << volume << endl;
+    if (id_cup != -1)
+    {
+        cout << endl;
+        cout << "Cup ID: " << id_cup << endl;
+        cout << "Collor: " << color << endl;
+        cout << "Utilization: " << utilization << endl;
+        cout << "Weight: " << weight << endl;
+        cout << "Volume: " << volume << endl;
+    }
+    else
+    {
+        cout << endl;
+    }
 }
 //----------------------------------------------------------------------------------------
 // OPERATORS

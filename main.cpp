@@ -6,8 +6,8 @@ using namespace std;
 
 int main()
 {
-
-    cup cups_1st_set[] = {cup("Red", "Tea", 100, 300), cup("Blue", "Coffe", 200, 300), cup("Green", "Noodles", 300, 500)};
+    // In this test I will exced the clay limit.
+    cup cups_1st_set[] = {cup("Red", "Tea", 1000, 300), cup("Blue", "Coffe", 200, 300), cup("Green", "Noodles", 3000, 500)};
 
     cup_set Set1(3, cups_1st_set);
     Set1.show_set();

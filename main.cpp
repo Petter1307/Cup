@@ -6,8 +6,11 @@ using namespace std;
 
 int main()
 {
-    int a[] = {1, 2, 3, 5};
-    cout << sizeof(a) / sizeof(int);
-    cup cups_1st_set[] = {};
+
+    cup cups_1st_set[] = {cup("Red", "Tea", 100, 300), cup("Blue", "Coffe", 200, 300), cup("Green", "Noodles", 300, 500)};
+
+    cup_set Set1(3, cups_1st_set);
+    Set1.show_set();
+
     return 0;
 }

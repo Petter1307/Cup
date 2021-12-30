@@ -254,6 +254,7 @@ class cup_set
 
 public:
     cup_set(int n, cup cups[]);
+    void show_set();
 };
 cup_set::cup_set(int n, cup cups[])
 {
@@ -264,3 +265,11 @@ cup_set::cup_set(int n, cup cups[])
         this->cups[i] = cups[i];
     }
 }
+void cup_set::show_set()
+{
+
+    for (int i = 0; i < n; i++)
+    {
+        cups[i].show_cup_details();
+    }
+};

@@ -65,7 +65,7 @@ cup::cup(string color, string utilization, float weight, float volume)
         weight_rem(weight);
         id_cup = generateID();
         cout << endl;
-        cout << "Construcotr cu parametru id =" << id_cup << endl;
+        cout << "Constructor with parameters id =" << id_cup << endl;
         show_remaine_primary_material_weight();
     }
     else
@@ -94,7 +94,7 @@ cup::cup(const cup &c)
 
         id_cup = generateID();
         cout << endl;
-        cout << "Constructor de copiere, id = " << id_cup << endl;
+        cout << "Copy constructor, id = " << id_cup << endl;
         show_remaine_primary_material_weight();
     }
     else
@@ -138,7 +138,7 @@ void cup::set_weight(float weight)
         if (this->id_cup == -1)
         {
             this->id_cup = generateID();
-            cout << "Cupa creata, id = " << id_cup << endl;
+            cout << "Cup created, id = " << id_cup << endl;
         }
     }
     else

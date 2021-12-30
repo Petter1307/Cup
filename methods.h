@@ -248,7 +248,6 @@ int operator<=(cup &x, cup &y)
 // Relations between Classes. Lab 10 HOMEWORK
 class cup_set
 {
-
     int n;
     cup *cups;
 

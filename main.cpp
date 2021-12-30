@@ -15,7 +15,7 @@ int main()
     cup cup2("Blue", "Coffe", 300, 100);
 
     cup cup3(cup1);
-
+    // This is just testing overloading operators. They work as intendend.
     if (cup1 >= cup3)
         cout << "Yes" << endl;
     else

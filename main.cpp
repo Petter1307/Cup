@@ -6,39 +6,39 @@ using namespace std;
 
 int main()
 {
-    cup cana1;
-    cana1.set_weight(120);
-    cana1.set_color("Red");
-    cana1.set_utilization("Tea");
-    cana1.set_volume(200);
+    cup cup1;
+    cup1.set_weight(120);
+    cup1.set_color("Red");
+    cup1.set_utilization("Tea");
+    cup1.set_volume(200);
 
-    cup cana2("Blue", "Coffe", 300, 100);
+    cup cup2("Blue", "Coffe", 300, 100);
 
-    cup cana3(cana1);
+    cup cup3(cup1);
 
-    if (cana1 >= cana3)
+    if (cup1 >= cup3)
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
 
-    if (cana3 <= cana3)
+    if (cup3 <= cup3)
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
 
-    if (cana1 > cana2)
+    if (cup1 > cup2)
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
 
-    if (cana1 < cana2)
+    if (cup1 < cup2)
         cout << "Yes" << endl;
     else
         cout << "No" << endl;
 
-    cana1.show_cup_details();
-    cana2.show_cup_details();
-    cana3.show_cup_details();
+    cup1.show_cup_details();
+    cup2.show_cup_details();
+    cup3.show_cup_details();
 
     return 0;
 }

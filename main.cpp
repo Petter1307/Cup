@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 #include <conio.h>
-#include "metode.h"
+#include "methods.h"
 using namespace std;
 
 int main()

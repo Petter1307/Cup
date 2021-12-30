@@ -2,7 +2,6 @@
 #include <iostream>
 #include <string.h>
 #include <conio.h>
-#include "metode.h"
 
 using namespace std;
 

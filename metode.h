@@ -41,9 +41,11 @@ public:
     friend int operator>=(cup &x, cup &y);
 };
 //----------------------------------------------------------------------------------------
+// Initializing the static members cup class
 float cup::total_priamrymaterial_weight = 3000;
 int cup::n = 0;
 //----------------------------------------------------------------------------------------
+// Basic Constructor
 cup::cup()
 {
     color = "";
@@ -52,6 +54,7 @@ cup::cup()
     volume = 0.0;
 };
 //----------------------------------------------------------------------------------------
+// Constructor with parameters(?)
 cup::cup(string color, string utilization, float weight, float volume)
 {
     if (verify_eought_clay(weight))
@@ -73,8 +76,10 @@ cup::cup(string color, string utilization, float weight, float volume)
     }
 };
 //----------------------------------------------------------------------------------------
+// Copy Constructor
 cup::cup(const cup &c)
 {
+    // The cup will be created only if it`s enough clay.
     if (verify_eought_clay(c.weight))
     {
 
@@ -103,6 +108,7 @@ cup::cup(const cup &c)
 // SETTERS
 void cup::set_color(string color)
 {
+    // Fail safe
     if (this->weight == 0)
     {
         cout << "Please set the weight first!" << endl;
@@ -113,6 +119,7 @@ void cup::set_color(string color)
 };
 void cup::set_utilization(string utilization)
 {
+    // Fail safe
     if (this->weight == 0)
     {
         cout << "Please set the weight first!" << endl;
@@ -123,6 +130,7 @@ void cup::set_utilization(string utilization)
 };
 void cup::set_weight(float weight)
 {
+    // If it`s not enough clay in the deposit the cup won`t be created.
     if (verify_eought_clay(weight))
     {
         this->weight = weight;
@@ -141,6 +149,7 @@ void cup::set_weight(float weight)
 };
 void cup::set_volume(float volume)
 {
+    // Fail safe
     if (this->weight == 0)
     {
         cout << "Please set the weight first!" << endl;
@@ -169,7 +178,6 @@ float cup::get_weight()
 };
 //----------------------------------------------------------------------------------------
 // STATIC
-
 int cup::generateID()
 {
     return ++n;
@@ -201,6 +209,7 @@ void cup::show_cup_details()
 }
 //----------------------------------------------------------------------------------------
 // OPERATORS
+// Overloading some operators. Nothing much but it`s honest work.
 int cup::operator>(cup &x)
 {
     if (this->weight > x.weight)
@@ -236,7 +245,8 @@ int operator<=(cup &x, cup &y)
     else
         return 0;
 };
-// Relatii dintre clase. Tema lab 10.
+//----------------------------------------------------------------------------------------
+// Relations between Classes.
 class cup_set
 {
 

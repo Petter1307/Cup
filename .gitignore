@@ -1,3 +1,6 @@
 .vscode
 *.exe
 README.MD
+*.png
+*.pdf
+*.pptx

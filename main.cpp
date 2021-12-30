@@ -8,5 +8,6 @@ int main()
 {
     int a[] = {1, 2, 3, 5};
     cout << sizeof(a) / sizeof(int);
+    cup cups_1st_set[] = {};
     return 0;
 }

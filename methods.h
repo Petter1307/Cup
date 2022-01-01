@@ -11,7 +11,6 @@ class cup
 {
     string color;
     string utilization;
-    float weight; // The mass of clay used when the cup is created.
     float volume;
     int id_cup = -1;
     static int n;
@@ -264,6 +263,7 @@ class cup_set
 public:
     cup_set(int n, cup cups[]);
     void show_set();
+    ~cup_set();
 };
 cup_set::cup_set(int n, cup cups[])
 {
@@ -287,4 +287,5 @@ class ceramic_tableware
 protected:
     float weight;
     string type;
+    float weight; // The mass of clay used when the tableware is created.
 };

@@ -4,6 +4,8 @@
 #include "methods.h"
 using namespace std;
 
+// git link:  https://github.com/Petter1307/Cup
+
 int main()
 {
     cup cups_1st_set[] = {cup("Red", "Tea", 1000, 300), cup("Blue", "Coffe", 200, 300), cup("Green", "Noodles", 3000, 500)};

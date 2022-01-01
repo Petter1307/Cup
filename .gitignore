@@ -1,6 +1,4 @@
-.vscode
-*.exe
-README.MD
-*.png
-*.pdf
-*.pptx
+!.gitignore
+!*.cpp
+!*.c
+!*.h

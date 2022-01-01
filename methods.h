@@ -263,6 +263,7 @@ class cup_set
 public:
     cup_set(int n, cup cups[]);
     void show_set();
+    ~cup_set();
 };
 cup_set::cup_set(int n, cup cups[])
 {

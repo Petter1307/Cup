@@ -5,6 +5,8 @@
 
 using namespace std;
 
+class cemramic_tableware;
+
 class cup
 {
     string color;
@@ -279,4 +281,10 @@ void cup_set::show_set()
     {
         cups[i].show_cup_details();
     }
+};
+class ceramic_tableware
+{
+protected:
+    float weight;
+    string type;
 };

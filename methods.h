@@ -16,7 +16,7 @@ public:
     ceramic_tableware()
     {
         weight = 0.0;
-        type = " ";
+        type = "";
     };
     ceramic_tableware(float weight) : weight(weight)
     {

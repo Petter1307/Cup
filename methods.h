@@ -5,9 +5,28 @@
 
 using namespace std;
 
-class cemramic_tableware;
+class ceramic_tableware
+{
+    string type;
 
-class cup
+protected:
+    float weight;
+
+public:
+    ceramic_tableware()
+    {
+        weight = 0.0;
+        type = " ";
+    };
+    ceramic_tableware(float weight) : weight(weight)
+    {
+        type = "";
+    };
+    ceramic_tableware(float weight, string type) : weight(weight), type(type){};
+    ~ceramic_tableware(){};
+};
+
+class cup : public ceramic_tableware
 {
     string color;
     string utilization;
@@ -21,22 +40,22 @@ class cup
     static int verify_eought_clay(float weight);        //
 
 public:
-    cup();                                                             //
-    cup(string color, string utilization, float weight, float volume); //
-    cup(const cup &c);                                                 //
-    ~cup(){};                                                          //
-    void set_color(string color);                                      //
-    void set_utilization(string utilization);                          //
-    void set_weight(float weight);                                     //
-    void set_volume(float volume);                                     //
-    string get_color();                                                //
-    string get_utilization();                                          //
-    float get_weight();                                                //
-    float get_volume();                                                //
-    void show_cup_details();                                           //
-    int operator>(cup &x);                                             //
-    int operator<(cup &x);                                             //
-    int operator==(cup &x);                                            //
+    cup();                                                                                                  //
+    cup(string color, string utilization, float weight, float volume) : ceramic_tableware(weight, "Cup"){}; //
+    cup(const cup &c);                                                                                      //
+    ~cup(){};                                                                                               //
+    void set_color(string color);                                                                           //
+    void set_utilization(string utilization);                                                               //
+    void set_weight(float weight);                                                                          //
+    void set_volume(float volume);                                                                          //
+    string get_color();                                                                                     //
+    string get_utilization();                                                                               //
+    float get_weight();                                                                                     //
+    float get_volume();                                                                                     //
+    void show_cup_details();                                                                                //
+    int operator>(cup &x);                                                                                  //
+    int operator<(cup &x);                                                                                  //
+    int operator==(cup &x);                                                                                 //
     friend int operator<=(cup &x, cup &y);
     friend int operator>=(cup &x, cup &y);
 };
@@ -61,7 +80,7 @@ cup::cup(string color, string utilization, float weight, float volume)
     {
         this->color = color;
         this->utilization = utilization;
-        this->weight = weight;
+        // this->weight = weight;
         this->volume = volume;
         weight_rem(weight);
         id_cup = generateID();
@@ -256,7 +275,6 @@ int operator<=(cup &x, cup &y)
 // Relations between Classes. Lab 10 HOMEWORK
 class cup_set
 {
-
     int n;
     cup *cups;
 
@@ -281,11 +299,4 @@ void cup_set::show_set()
     {
         cups[i].show_cup_details();
     }
-};
-class ceramic_tableware
-{
-protected:
-    float weight;
-    string type;
-    float weight; // The mass of clay used when the tableware is created.
 };
